@@ -1,0 +1,94 @@
+~Problem:
+  Page 197 (Foundations of Algorithms, edition 5, Neapolitan)
+  Problem #14
+  Implement Dijkstra's algorithm (Algorithm 4.3) on your system, and study its performance using different graphs.
+  
+  ---
+  
+~Book Algorithm: Reference when building.
+
+    ~
+    
+    Pseudo Demo:
+      Y = {v1}
+      F = empty set
+      
+      while(the instance is not solved){
+        select a vertex v from V-Y that has a         //selection
+        shortest path from v1, using only vertices    //procedure
+        in Y as intermediates                         //feasability
+        
+        
+        add the new vertex v to Y
+        add the edge(on the shortest path) that touches v to F;
+        
+        if(Y==V)
+          instance is solved                        //solution check
+      }
+
+     ~
+     
+  Problem: Determine the shortest paths from V1 to all other vertices in a weighted, directed graph.
+  Input:
+    -Integer n >= 2
+    -Connected, weighted, directed graph containing n vertices.
+    -Graph represented by 2D Array W with i & j indices index from [1,n]
+     where W[i][j] is the weight on the edge from Ith vertex to the Jth vertex.
+     
+  void dijkstra(int n, const number W[][], setOfEdges F)
+    
+    index i, vNear;
+    edge e;
+    index touch[2..n];
+    number length[2..n];
+    
+    F = empty set;
+    for(i = 2; i<= n; i++){  //for all verts, 
+      touch[i] = 1;          //init v1 to be the last vertex on the current shortest path
+      length[i] = W[1][i];   //from v1. Initialize length of that path to be the weight on the edge from v1
+    }
+    
+    
+    repeat(n-1 times){  //Add all n-1 vertices to Y
+      min = 9999; //pseudo for infinity
+      for(i = 2; i <= n; i++){      //check each vertex   
+        if(0 <= length[i] < min){  //for shortest path
+          min = length[i];         
+          vNear = i;
+        }
+      }
+      
+      e = edge from vertex indexed by touch[vNear] to vertex indexed by vNear
+      f.add(e) //set of edges F add edge e
+      
+      for(i = 2; i <= n; i++){                           //For each vertex not in Y
+        if(length[vNear] + W[vNear][i] < length[i]){     //update its shortest path.
+          length[i] = length[vNear] + W[vNear][i];       //Add vertex indexed by vNear to Y
+          touch[i] = vNear;                               
+        }
+      }
+      
+      length[vNear] = -1;  
+       
+      }
+      
+    
+    }//end dijkstra()
+
+  ---
+
+~Pseudocode of test:
+
+  package dijkstraalgorithm
+
+  class TestDijkstra
+    
+    main(){
+      WeightedGraph g = WeightedGraph.createdFromMatrix(GraphData.graph1) 
+      int[] 
+    }     
+    
+    
+    /*
+    
+    */
