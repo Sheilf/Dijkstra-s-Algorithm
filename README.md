@@ -1,5 +1,5 @@
 # Dijkstra-s-Algorithm
-Programming a demo of Dijkstra's shortest path between nodes.
+Programming a demo of Dijkstra's shortest path between nodes using Greedy Approach & implementation.
 
 
 ---
