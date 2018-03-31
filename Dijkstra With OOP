@@ -3,8 +3,8 @@ http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
 
 ~Goal: Explain in basic English
     General information/talk about the algorithm: https://www.youtube.com/watch?v=GazC3A4OQTE
-    Demo of process: TBD
-
+    Visual demo of process: https://www.youtube.com/watch?v=eFZCPlZCyIM
+    Visual demo with code process: 
 ~Pseudo: 
     Foreach node set distance[node] = HIGH
     SettledNodes = empty
