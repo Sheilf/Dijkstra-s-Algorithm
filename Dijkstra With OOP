@@ -2,6 +2,8 @@ study dis
 http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
 
 ~Goal: Explain in basic English
+    General information/talk about the algorithm: https://www.youtube.com/watch?v=GazC3A4OQTE
+    Demo of process: TBD
 
 ~Pseudo: 
     Foreach node set distance[node] = HIGH
