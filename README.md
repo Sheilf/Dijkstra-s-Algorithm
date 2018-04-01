@@ -23,8 +23,6 @@ Files included:
 
                                                         3. Dijkstra.java
 
-                                                        4. GraphData.class
-
                                                         5. ReadME.txt
 
  To run call:            Compile & Run TestDijkstra
